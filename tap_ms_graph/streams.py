@@ -38,3 +38,10 @@ class UsersStream(MSGraphStream):
     path = "/users"
     primary_keys = ["id"]
     odata_context = "users"
+
+class SitesStream(MSGraphStream):
+    name = "sites"
+    path = "/sites"
+    primary_keys = ["id"]
+    odata_context = "sites"
+    child_context = {"id": "site_id"}    
